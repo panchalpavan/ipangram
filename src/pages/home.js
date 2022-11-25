@@ -1,5 +1,5 @@
 import { React, useState } from "react"
-import { useHistory, Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 import { Card, CardBody, CardHeader, Row, Col, Input, Label, Button } from "reactstrap"
 
@@ -59,12 +59,8 @@ const Home = () => {
   // using an array to store the checked items
   const [isChecked, setIsChecked] = useState([])
 
-  console.log(isChecked)
-
   // handle changes
-
   const handleInputChange = (event, index) => {
-    console.log("index", index)
     const { name, value } = event.target
 
     setValues((state) => {
@@ -91,10 +87,6 @@ const Home = () => {
       return { ...state }
     })
   }
-
-  const handleNextClick = () => {}
-
-  console.log(values)
 
   return (
     <div>

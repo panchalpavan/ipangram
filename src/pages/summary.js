@@ -1,14 +1,12 @@
-import { React, useState } from "react"
-import { useHistory, useLocation, Link } from "react-router-dom"
+import { React } from "react"
+import { useLocation, Link } from "react-router-dom"
 
 import DataTable from "react-data-table-component"
-import { Card, CardBody, CardHeader, Row, Col, Input, Label, Button } from "reactstrap"
+import { Card, CardBody, CardHeader, Row, Col, Button } from "reactstrap"
 
 const Summary = () => {
   const location = useLocation()
   const { data, checkboxes } = location.state
-  console.log("props", data)
-  console.log("props", checkboxes)
 
   const columns = [
     {
